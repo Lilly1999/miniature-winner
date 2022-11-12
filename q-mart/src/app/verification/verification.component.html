@@ -1,0 +1,31 @@
+<mat-card >
+    <mat-card-content>
+
+    <div class="container">
+    <div class="row">
+     <h2>verification</h2>
+     <h5>We have sent a verification code to<br>+254789***456</h5>
+        <div class="col-md-3">
+            <input type=number  #txt1 maxlength="1" (keyup)="move ($event, '',txt1,txt2)">
+        </div>
+        <div class="col-md-3">
+            <input type=number #txt2 maxlength="1" (keyup)="move ($event, txt1, txt2,txt3)">
+        </div>
+        <div class="col-md-3">
+            <input type=number #txt3 maxlength="1" (keyup)="move ($event, txt2, txt3,txt4)">
+        </div>
+        
+        <div class="col-md-3">
+            <input type=number #txt4 maxlength="1" (keyup)="move ($event, txt3, txt4,'')">
+        </div>
+        
+    
+    </div>
+    <!-- <a style="color:#980411; position:absolute; left:0; font-family: Nunito sans;font-size: 12px;font-weight: 600;" >Call me</a>
+<a style="color:#980411;  position:absolute; right: 0; font-family: Nunito sans;font-size: 12px;font-weight: 600;" >Resend code</a> -->
+</div>
+<h6>
+    Send verification code to <a style="color:#980411;" routerLink="/Confirm">Email</a> instead
+</h6>
+</mat-card-content>
+</mat-card>

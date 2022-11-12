@@ -1,0 +1,42 @@
+
+mat-card{
+    width:500px;
+    text-align: center;
+    background-color: #d8d2d2;
+    /* position: absolute;
+    left:400px;
+    top:100px; */
+}
+
+.header{
+    text-align:center;
+
+}
+h2{
+    margin-top: 50px;
+}
+
+.button{
+    text-decoration-color: white;
+    size: 40%;
+    align-items: center;
+    background-color:#980411;
+    width:250px;
+    color:white;
+    font-family: Nunito sans;
+}
+.Icon{
+    position:absolute;
+    right:0;
+   
+}
+p{
+    font-family: Nunito Sans;
+    font-weight: bold;
+}
+.full-width{
+    width:60%;
+}
+.card{
+    width: 600px;
+}

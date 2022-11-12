@@ -1,0 +1,22 @@
+<mat-card>
+    <mat-card-content>
+        <div class="header">
+            <h2 >Recover password</h2>
+           <p>Don't worry it happens please enter the phone number associated with it</p>
+          </div>
+        <form  name="RecoverForm" [formGroup]="RecoverForm">
+            <div class="PhoneNo">
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Phone no.</mat-label>
+                    <input (keyup)="onKey($event)" type="text" formControlName="PhoneNo" matInput required/>  
+                    <mat-error *ngIf="!RecoverForm.get('PhoneNo')?.valid && RecoverForm.get('PhoneNo')?.touched">Password is required</mat-error>  
+                    <mat-error *ngIf="RecoverForm.get('PhoneNo')?.hasError 'pattern'">Please Enter a valid phone number</mat-error>
+                </mat-form-field>
+            </div>
+          <span class="use"> <a >Use email address instead</a></span> 
+
+            <div><button mat-raised-button style="background-color:#980411;margin-top:10px; width:350px;color:white;font-family: Nunito sans;position:absolute;bottom:100px; left:490px;" routerLink="/verification">SEND CODE</button> </div>
+        </form> 
+    </mat-card-content>
+</mat-card>
+

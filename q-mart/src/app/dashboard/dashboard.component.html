@@ -1,0 +1,124 @@
+<section class="banner">
+  <div class="container text-center">
+    <div class="search-bar">
+      <mat-icon>search-bar</mat-icon>
+    </div>
+    <owl-carousel-o [options]="productOptions">
+      <ng-template carouselSlide>
+        <img class="image1" src="../assets/c2.jpg">
+      </ng-template>
+      <ng-template carouselSlide>
+        <img class="image1" src="../assets/c3.jpg">
+      </ng-template>
+      <ng-template carouselSlide>
+        <img class="image1" src="../assets/c4.jpg">
+      </ng-template>
+      <ng-template carouselSlide>
+        <img class="image1" src="../assets/c5.jpg">
+      </ng-template>
+    </owl-carousel-o>
+    <div>Some tags after</div>
+  </div>
+</section>
+<section class="bg-color">
+  <div class="containers">
+    <div class="title">
+      <p>New Arrivals</p>
+    </div>
+    <div class="row">
+      <!-- <div class="col-md-3">
+        <div class="card">
+          <div class="main">
+            <div class="new">New</div>
+            <div class="product-container">
+              <div class="pro"><img src="../assets/handbag.jpeg" alt="handbag"></div>
+              <div class="pro"><img src="../assets/hood.jpg" alt="hood"></div>
+              <div class="pro"><img src="../assets/heels.jpg" alt="heels"></div>
+              <div class="pro"><img src="../assets/laptop.jpg" alt="laptop"></div>
+              <div class="pro"><img src="../assets/sneakers.jpeg" alt="sneakers"></div>
+            </div>
+            <div class="image">
+              <img src={{imageurl}} alt="handbag">
+            </div>
+            <div class="cart-line"></div>
+            <div class="cart-item">
+              <ul>
+                <li><a href=""><mat-icon>add_shopping_cart</mat-icon></a></li>
+                <li><a href=""><mat-icon></mat-icon></a> </li>
+              </ul>
+            </div>
+          </div>
+          <div class="content">
+            <a href="">Handbag</a>
+          </div>
+          <p style="font-weight:bold;font-family: Nunito sans;font-size: 20px;">Ksh 700 </p>
+
+
+        </div>
+      </div> -->
+
+      <div class="col-md-3" *ngFor="let product of productArray">
+        <div class="new">New</div>
+        <img class="products" src={{product.imageUrl}} alt="handbag">
+        <h2>{{product.name}}</h2>
+        <p class="money">Ksh {{product.price}}
+          <mat-icon>add_shopping_cart</mat-icon>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bg-color">
+  <div class="containers">
+    <div class="title">
+      <p>Popular Products</p>
+    </div>
+    <div class="row">
+
+      <div class="card">
+        <div class="main">
+          <div class="new">New</div>
+          <div class="product-container">
+            <div class="pro"><img src="../assets/handbag.jpeg" alt="handbag"></div>
+            <div class="pro"><img src="../assets/hood.jpg" alt="hood"></div>
+            <div class="pro"><img src="../assets/heels.jpg" alt="heels"></div>
+            <div class="pro"><img src="../assets/laptop.jpg" alt="laptop"></div>
+            <div class="pro"><img src="../assets/sneakers.jpeg" alt="sneakers"></div>
+          </div>
+          <div class="image">
+            <img src={{imageurl}} alt="handbag">
+          </div>
+          <div class="cart-line"></div>
+          <div class="cart-item">
+            <ul>
+              <li><a href="">
+                  <mat-icon>add_shopping_cart</mat-icon>
+                </a></li>
+              <li><a href="">
+                  <mat-icon></mat-icon>
+                </a> </li>
+            </ul>
+          </div>
+        </div>
+        <div class="content">
+          <a href="">Handbag</a>
+        </div>
+        <p style="font-weight:bold;font-family: Nunito sans;font-size: 20px;">Ksh 700 </p>
+
+
+      </div>
+    </div>
+
+    <div class="col-md-3" *ngFor="let product of productArray">
+
+      <img class="products" src={{product.imageUrl}} alt="handbag">
+      <h2>{{product.name}}</h2>
+      <p class="money">Ksh {{product.price}}
+        <mat-icon>add_shopping_cart</mat-icon>
+      </p>
+
+    </div>
+  </div>
+
+
+</section>

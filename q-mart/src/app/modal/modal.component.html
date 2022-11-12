@@ -1,0 +1,11 @@
+
+<p>How do you like to receive your verification code?</p>
+<div>
+    <button mat-button   (click)="smsVerify()">
+        <img src="\assets\sms.png" ><h5>via sms</h5>
+    </button> 
+    <button mat-button  (click)="emailVerify()">
+         <img src="\assets\email.png" ><h5>via email</h5>
+    </button>
+    <button mat-raised-button [disabled]="proceed" color="accent" routerLink="/verification"> PROCEED </button>
+</div>

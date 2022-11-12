@@ -1,0 +1,125 @@
+
+<!-- <div fxLayout="row"> -->
+<!-- <div fxLayoutAlign="center center" fxFlexFill >
+<mat-card >
+    <mat-card-content >
+        <div class="header">
+            <img class="image"  src="../assets/q4.png" alt="logo">
+            <h2>Welcome Back!!</h2>
+            <p> Please fill in the form below in order to sign in</p>
+          </div>
+         
+        <form  name="SignInForm" [formGroup]="SignInForm">
+            <div class="PhoneNo">
+                <mat-form-field class="full-width" appearance="outline" >
+                    <mat-label>Phone no.</mat-label>
+                    <input (keyup)="onKey($event)"
+                     type="text" formControlName="PhoneNo" matInput required/>
+                    <mat-error *ngIf="SignInForm.get ('PhoneNo')?.errors?.['required']">
+                      Phone number is required </mat-error>
+                      <mat-error *ngIf="SignInForm.get('PhoneNo')?.errors?.['pattern']">Please enter a valid phone number</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="Password">
+               <mat-form-field class="full-width" floatLabel="auto" appearance="outline">
+                <mat-label> Password</mat-label>
+                <input  (keyup)="onKey($event)"
+                [type]="type" formControlName="Password" matInput [type]="hide ? 'password' : 'text'"matInput required/>
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button> 
+                
+               <mat-error *ngIf="!SignInForm.get('Password')?.valid && SignInForm.get('Password')?.touched">
+                    Password is required </mat-error>
+                <br>
+               <mat-error *ngIf="SignInForm.get('Password')?.hasError('minlength') ">
+                Password must be at least 8 characters 
+                </mat-error> 
+                
+               </mat-form-field>
+            </div>
+
+            <span class="aLink" style="color:#980411;font-family: Nunito sans,semi-bold" routerLink="/recover">Forgot password</span>
+
+            <div><button class="mat-raised-button" (click)="onSignIn()" [disabled]="!SignInForm.valid">SIGN IN</button> </div>
+        </form> 
+        <h6 class="hr-lines">continue with </h6> 
+        <div class ="mx-3 my-2 py-2 bordert">
+            <div class="text-center py-3">
+          <a href="https://www.google.com" target="_blank" class="px-2"> <img src="assets/google.png"></a>
+          <a href="https://www.google.com" target="_blank" class="px-2"> <img src="assets/facebook.png"></a>
+        </div>
+    </div> 
+   
+        <h6>Do you have an account?
+        <a style="color:#980411;  margin-top: 50px; " routerLink="/SignUp" >Sign up</a>
+    </h6>
+    </mat-card-content>
+
+</mat-card>
+
+</div> -->
+<div fxLayout="row wrap" fxLayoutAlign="center center">
+  <mat-card fxLayout="row" fxFlex="100%" class="center space-top">
+    <mat-card-content>
+        <div fxLayout="row">
+            <div fxFlex="50%">
+                <h2>Life is easy with Q-Mart</h2>
+                <img src="../assets/giphy.gif">
+                <p>Shopping has now been made easier.</p>
+            </div>
+            <div fxFlex="50%">
+                <div class="header">
+                    <img class="image"  src="../assets/q4.png" alt="logo">
+                    <h2>Welcome Back!!</h2>
+                  </div>            
+                <form  name="SignInForm" [formGroup]="SignInForm">
+                    <div class="PhoneNo">
+                        <mat-form-field class="full-width" appearance="outline" >
+                            <mat-label>Phone no.</mat-label>
+                            <input (keyup)="onKey($event)"
+                             type="text" formControlName="PhoneNo" matInput required/>
+                            <mat-error *ngIf="SignInForm.get ('PhoneNo')?.errors?.['required']">
+                              Phone number is required </mat-error>
+                              <mat-error *ngIf="SignInForm.get('PhoneNo')?.errors?.['pattern']">Please enter a valid phone number</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="Password">
+                       <mat-form-field class="full-width" floatLabel="auto" appearance="outline">
+                        <mat-label> Password</mat-label>
+                        <input  (keyup)="onKey($event)"
+                        [type]="type" formControlName="Password" matInput [type]="hide ? 'password' : 'text'"matInput required/>
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button> 
+                        
+                       <mat-error *ngIf="!SignInForm.get('Password')?.valid && SignInForm.get('Password')?.touched">
+                            Password is required </mat-error>
+                        <br>
+                       <mat-error *ngIf="SignInForm.get('Password')?.hasError('minlength') ">
+                        Password must be at least 8 characters 
+                        </mat-error> 
+                        
+                       </mat-form-field>
+                    </div>
+        
+                    <a class="aLink"  routerLink="/recover">Forgot password</a>
+        
+                    <div><button class="mat-raised-button" (click)="onSignIn()" [disabled]="!SignInForm.valid">SIGN IN</button> </div>
+                </form> 
+                <h6 class="hr-lines">continue with </h6> 
+                <div class ="mx-3 my-2 py-2 bordert">
+                    <div class="text-center py-3">
+                  <a href="https://www.google.com" target="_blank" class="px-2"> <img src="assets/google.png"></a>
+                  <a href="https://www.google.com" target="_blank" class="px-2"> <img src="assets/facebook.png"></a>
+                </div>
+            </div> 
+           
+                <h6 >Do you have an account?
+                <a style="color:#980411;  margin-top: 50px; " routerLink="/SignUp" >Sign up</a>
+            </h6> 
+            </div>
+        </div>
+    </mat-card-content>
+  </mat-card>
+</div>
