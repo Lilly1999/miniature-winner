@@ -1,0 +1,26 @@
+mat-toolbar{
+    position:sticky;
+    top:0;
+    z-index: 100;
+    background: white;
+
+}
+button{
+    border:0;
+    outline: none;
+    background: transparent;
+}
+.user{
+    font-size:14px;
+    margin-right: 100px;
+}
+.user-image{
+    border-radius:50%;
+    width:50px;
+}
+.sign{
+    margin-right: 60px;
+}
+.spacer{
+    flex:1 1 auto;
+}

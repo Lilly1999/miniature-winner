@@ -1,0 +1,29 @@
+
+<mat-toolbar>
+    <!-- <mat-toolbar-row> -->
+        <button mat-button-icon><mat-icon (click)="toggleSidebar()">menu</mat-icon></button>
+       <div class="spacer"></div>
+              <a mat-button routerLink="/signin"> Signin</a>
+              <a mat-button routerLink="/signup"> Signup</a>
+              <a mat-button> Cart</a>
+              <a mat-button> <mat-icon>account_circle </mat-icon>
+                User Name
+               <mat-icon class="user-image-icon ml-1">keyboard_arrow_down</mat-icon>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item>
+                            <mat-icon> exit_to_app</mat-icon>
+                            Logout
+                        </button>
+                    </mat-menu>
+              </a>
+    <!-- </mat-toolbar-row> -->
+    <!-- <mat-toolbar-row>
+        <div fxFlex="20" style="flex:1 1 100%;box-sizing:border-box; max-width:20% ">
+         <h2>Q-Mart</h2>
+        </div>
+        <div fxFlex fxShow="false" fxShow.gt-sm="flex 1 1 0%;box-sizing:border-box">
+        </div>
+    </mat-toolbar-row> -->
+       
+       
+</mat-toolbar>

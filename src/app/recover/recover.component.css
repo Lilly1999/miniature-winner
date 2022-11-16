@@ -1,0 +1,27 @@
+mat-card{
+    width:100%;
+    margin:2cm auto;
+    text-align: center;
+    height: 600px;
+    background-color:#F8F8F8;
+}
+.header{
+    text-align:center;
+
+}
+.full-width{
+    width:40%;
+}
+
+.aLink{
+    float:center;
+    padding: right 90px;
+    color:#980411;
+    font-family: Nunito sans;
+    font-size: medium;
+
+}
+.image{
+    width:60px;
+    margin-top: 20px;
+}

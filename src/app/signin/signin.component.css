@@ -1,0 +1,91 @@
+mat-card{
+    /* width:500px; */
+    /* margin:2cm auto; */
+    text-align: center;
+    /* height: 600px; */
+    background-color:#F8F8F8;
+    justify-content: center;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+   
+}
+.header{
+    text-align:center;
+
+}
+.full-width{
+    width:80%;
+}
+.forgot-password{
+    padding-left: 50px;
+    color:#980411 ;
+
+}
+.PhoneNo {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+
+.aLink{
+    float:right;
+    padding: right 90px;
+    color:#980411;
+    font-family: Nunito sans;
+    font-size: medium;
+
+}
+
+.hr-lines{
+    position: relative;
+    width: 450px;
+    margin: 6 px;
+    text-align: center;
+}
+.hr-lines:before{
+    content: " ";
+    height: 1px;
+    width:160px;
+    background: #483A3B;
+    display:block;
+    position:absolute;
+    top:70%;
+    left: 20px;
+    
+}
+.hr-lines:after{
+    content: " ";
+    height: 1px;
+    width:160px;
+    background: #483A3B;
+    display:block;
+    position:absolute;
+    top:50%;
+    right:0;
+    
+}
+h2{
+    font-family: Nunito sans;
+    font-weight: bold;
+    margin-top: 0px;
+}
+.Icon{
+    position:absolute;
+    right:0;
+    margin-top:-20px;;
+}
+.mat-raised-button{
+    background-color:#980411;
+    margin:10px auto;
+    width:80%;
+    color:white;
+    font-family: Nunito sans;
+    border-radius: 6px;
+    height: 50px;
+  
+}
+.image{
+    width:40px;
+    margin-top: 50px;
+}

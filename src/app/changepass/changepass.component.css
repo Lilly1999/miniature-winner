@@ -1,0 +1,30 @@
+mat-card{
+    width:500px;
+    margin:2cm auto;
+    text-align: center;
+    height: 100%;
+    background-color:#F8F8F8;
+}
+.header{
+    text-align:center;
+
+}
+.full-width{
+    width:100%;
+}
+h2{
+    font-family: Nunito sans;
+    margin-top: 50px;
+}
+.Icon{
+    position:absolute;
+    right:0;
+    margin-top:0px;;
+}
+.set{
+    margin-top: 50px;
+}
+.image{
+    width:40px;
+    margin-top: 40px;
+}
