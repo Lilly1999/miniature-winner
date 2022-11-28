@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { NotfoundComponent } from './notfound/notfound.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -34,6 +33,11 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatSelectModule } from '@angular/material/select';
 import {MatSliderModule } from '@angular/material/slider';
 import { FormsModule } from '@angular/forms';
+import { ApiService } from './api.service';
+import {MatBadgeModule} from '@angular/material/badge';
+import { CartComponent } from './cart/cart.component';
+import {MatTableModule } from '@angular/material/table';
+import { LayoutModule } from '@angular/cdk/layout';
 
 
 
@@ -52,6 +56,8 @@ import { FormsModule } from '@angular/forms';
     RecoverComponent,
     VerificationComponent,
     ChangepassComponent,
+    CartComponent,
+    
 
     
   ],
@@ -59,7 +65,6 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule,
     BrowserAnimationsModule,
     MatSidenavModule,
     MatMenuModule,
@@ -78,8 +83,12 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     MatSelectModule,
     MatSliderModule,
-    FormsModule  ],
-    providers: [
+    FormsModule,
+    MatBadgeModule,
+    MatTableModule,
+    LayoutModule,
+   ],
+    providers: [ ApiService,
       {
         provide: MatDialogRef,
         useValue: {}
