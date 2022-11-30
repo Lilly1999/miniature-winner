@@ -1,43 +1,45 @@
-<div fxLayout="row wrap" fxLayoutAlign="center center">
-  <mat-card fxLayout="row" fxFlex="100%" class="center space-top">
-    <mat-card-content>
-      <div fxLayout="row" style="background-color:#980411">
-        <div fxFlex="75%">
-          <h2>Life is easy with Q-Mart</h2>
-          <img src="../assets/Group.png">
-          <img src="../assets/categories.png">
-          <br> <br>
-          <img src="../assets/cart1.png">
-
-          <p>Shopping has now been made easier.</p>
-        </div>
-        <div fxFlex="25%">
-          <mat-card>
-            <mat-card-content>
+<!-- <div class="signup"  fxLayoutAlign="center center"> -->
+      
+  <div fxLayout="row wrap" style="flex-flow:row-wrap;box-sizing:border-box;display: flex;">
+         <mat-card class="hide">
+          <div fxFlex="100" fxflex.gt-sm="50" class="p-2" style="flex:1 1 100%; box-sizing:border-box; max-width:100%;" >          
+            <h2>Life is easy with Q-Mart</h2>
+            <img class="group"   src="../assets/Group.png">
+            <img class="categories"src="../assets/categories.png">
+            <br> <br>
+            <img class="cart1" src="../assets/cart1.png">
+            <!-- <p>Shopping has now been made easier.</p> -->
+            </div>
+         </mat-card>
+          <mat-card style="width: 50%;margin-top: 30px;
+          float: right;right:0px">
+        <div fxFlex="100" fxflex.gt-sm="50" class="p-2 mt-2" style="flex:1 1 100%; box-sizing:border-box; max-width:100%;">
+        
               <div class="header">
                 <h2>Let's get you all set up!!</h2>
                 <p> <b> By signing up,you're agreeing to our <a>Terms & Conditions</a> and <a>Privacy Policy</a></b>
                 </p>
               </div>
-              <form (ngSubmit)="onSignUp()" name="SignUnForm" [formGroup]="SignUpForm">
+              
+              <form (ngSubmit)="signUp()" name="SignUnForm" [formGroup]="SignUpForm" >
                 <div class="Username">
                   <mat-form-field class="full-width" appearance="outline">
                     <mat-label>Username</mat-label>
-                    <input type="text" formControlName="Username" matInput required />
-                    <mat-error *ngIf="!SignUpForm.get ('Username')?.valid && SignUpForm.get('Username')?.touched">
+                    <input type="text" formControlName="username" matInput required />
+                    <mat-error *ngIf="!SignUpForm.get ('username')?.valid && SignUpForm.get('username')?.touched">
                       Username is required
                     </mat-error>
                   </mat-form-field>
                 </div>
                 <div class="PhoneNo">
                   <mat-form-field class="full-width" appearance="outline">
-                    <mat-label> Phone no.</mat-label>
-                    <input (keyup)="onKey($event)" type="text" formControlName="PhoneNo" matInput required />
+                    <mat-label> Phone Number</mat-label>
+                    <input  type="text" formControlName="phone" matInput required />
 
-                    <mat-error *ngIf="SignUpForm.get('PhoneNo')?.errors?.['required']">
+                    <mat-error *ngIf="SignUpForm.get('phone')?.errors?.['required']">
                       Phone number is required
                     </mat-error>
-                    <mat-error *ngIf="SignUpForm.get('PhoneNo')?.errors?.['pattern']">
+                    <mat-error *ngIf="SignUpForm.get('phone')?.errors?.['pattern']">
                       Please enter a valid phone number
                     </mat-error>
                   </mat-form-field>
@@ -46,61 +48,63 @@
                   <mat-form-field class="full-width" appearance="outline">
                     <mat-label>Email address</mat-label>
 
-                    <input (keyup)="onKey($event)" formControlName="Email" matInput required />
-                    <mat-error *ngIf="SignUpForm.get('Email')?.errors?.['required']">
-                      Email is required <br>
+                    <input  formControlName="email" matInput required />
+                    <mat-error *ngIf="SignUpForm.get('email')?.errors?.['required']">
+                      Email is required 
                     </mat-error>
-                    <mat-error *ngIf="SignUpForm.get('Email')?.errors?.['email']">
+                    <mat-error *ngIf="SignUpForm.get('email')?.errors?.['email']">
                       Please enter a valid Email Address
                     </mat-error>
                   </mat-form-field>
-                </div> <br>
+                </div> 
                 <div class="Password">
                   <mat-form-field class="full-width" appearance="outline">
                     <mat-label> Password</mat-label>
-                    <input  [type]="type" class="formControl" formControlName="Password" matInput
+                    <input  [type]="type" class="formControl" formControlName="password" matInput
                       [type]="hide ? 'password' : 'text'" matInput required />
                     <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                       [attr.aria-pressed]="hide">
                       <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                     </button>
 
-                    <mat-error *ngIf="SignUpForm.get ('Password')?.errors?.['required']">
+                    <mat-error *ngIf="SignUpForm.get ('password')?.errors?.['required']">
                       Password is required
                     </mat-error>
-                    <mat-error *ngIf="SignUpForm.get('Password')?.errors?.['minlength'] ">
+                    <mat-error *ngIf="SignUpForm.get('password')?.errors?.['minlength'] ">
                       Password must be at least 8 characters
                     </mat-error>
 
                   </mat-form-field>
 
-                </div><br>
-                <div class="ConfirmPassword">
+                </div>
+                <div class="confirmPassword">
                   <mat-form-field class="full-width" appearance="outline">
 
                     <mat-label> Confirm password</mat-label>
-                    <input [type]="type" class="formControl" formControlName="ConfirmPassword" matInput
+                    <input (keyup)="onKey($event)" [type]="type" class="formControl" formControlName="confirmPassword" matInput
                       [type]="hide ? 'password' : 'text'" matInput required />
                     <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                       [attr.aria-pressed]="hide">
                       <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                     </button>
                     <mat-error
-                      *ngIf="!SignUpForm.get('ConfirmPassword')?.valid && SignUpForm.get('ConfirmPassword')?.touched">
+                      *ngIf="SignUpForm.get('confirmPassword')?.errors?.['required']">
                       Confirm password is required
                     </mat-error>
-                    <mat-error *ngIf="SignUpForm.get('ConfirmPassword')?.errors?.['passwordMismatch'] ">
+                    <mat-error  *ngIf="SignUpForm.get('confirmPassword')?.invalid && SignUpForm.get('confirmPassword')?.touched || SignUpForm.get('confirmPassword')?.dirty  " >
                       Password and confirm password do not match
                     </mat-error>
                   </mat-form-field>
-                </div><br>
-                <div>
-                  <button mat-raised-button
-                    style="background-color:#980411;width:250px;color:white;font-family: Nunito sans;"
-                    (click)="openDialog()" (click)="onSignUp()" [disabled]="!SignUpForm.valid">SIGN UP</button>
                 </div>
+              <div>
+                  <button mat-raised-button
+                    style="background-color:#980411;width:200px;color:white;font-family: Nunito sans;"
+                    (click)="signUp()" [disabled]="!SignUpForm.valid">SIGN UP</button>
+              </div>
               </form>
-            </mat-card-content>
-
-          </mat-card>
+         </div>
+         
+        </mat-card>
         </div>
+
+        

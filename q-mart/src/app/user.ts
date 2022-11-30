@@ -1,7 +1,7 @@
 export interface User {
   "username": "string",
-  "phone": 0,
+  "phone": "string",
   "email": "string",
   "password": "string",
-  "cPassword": "string"
+  "confirmPassword": "string"
 }

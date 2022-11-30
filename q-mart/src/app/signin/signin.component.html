@@ -63,12 +63,12 @@
   <mat-card fxLayout="row" fxFlex="100%" class="center space-top">
     <mat-card-content>
         <div fxLayout="row">
-            <div fxFlex="50%">
+            <div fxFlex="50%" class="hide">
                 <h2>Life is easy with Q-Mart</h2>
-                <img src="../assets/giphy.gif">
+                <img  class="giphy" src="../assets/giphy.gif">
                 <p>Shopping has now been made easier.</p>
             </div>
-            <div fxFlex="50%">
+            <div fxFlex="100%">
                 <div class="header">
                     <img class="image"  src="../assets/q4.png" alt="logo">
                     <h2>Welcome Back!!</h2>
@@ -77,8 +77,7 @@
                     <div class="PhoneNo">
                         <mat-form-field class="full-width" appearance="outline" >
                             <mat-label>Phone no.</mat-label>
-                            <input (keyup)="onKey($event)"
-                             type="text" formControlName="PhoneNo" matInput required/>
+                            <input type="text" formControlName="PhoneNo" matInput required/>
                             <mat-error *ngIf="SignInForm.get ('PhoneNo')?.errors?.['required']">
                               Phone number is required </mat-error>
                               <mat-error *ngIf="SignInForm.get('PhoneNo')?.errors?.['pattern']">Please enter a valid phone number</mat-error>
@@ -105,7 +104,7 @@
         
                     <a class="aLink"  routerLink="/recover">Forgot password</a>
         
-                    <div><button class="mat-raised-button" (click)="onSignIn()" [disabled]="!SignInForm.valid">SIGN IN</button> </div>
+                    <div><button class="mat-raised-button" (click)="onSignIn()"  [disabled]="!SignInForm.valid">SIGN IN</button> </div>
                 </form> 
                 <h6 class="hr-lines">continue with </h6> 
                 <div class ="mx-3 my-2 py-2 bordert">
@@ -116,7 +115,7 @@
             </div> 
            
                 <h6 >Do you have an account?
-                <a style="color:#980411;  margin-top: 50px; " routerLink="/SignUp" >Sign up</a>
+                <a style="color:#980411;  margin-top: 50px; " routerLink="/signup" >Sign up</a>
             </h6> 
             </div>
         </div>

@@ -35,20 +35,20 @@ export class SigninComponent implements OnInit {
   // }
 
   onSignIn() {
-    // console.log(this.SignInForm.value);
+    console.log(this.SignInForm.value);
     // console.log(this.SignInForm.controls['PhoneNo'].value)
 
-    this.apiService.signIn(this.SignInForm.controls['PhoneNo'].value, this.SignInForm.controls['Password'].value)
-    .subscribe(res => {
-      console.log(res);
+    // this.apiService.signIn(this.SignInForm.controls['PhoneNo'].value, this.SignInForm.controls['Password'].value)
+    // .subscribe(res => {
+    //   console.log(res);
       
-      alert("You have logged in successfully");
-      this.SignInForm.reset();
-      this.router.navigate(['/dashboard']);
-     },
-     err => {
-      alert("User already exists")
-     })
+    //   alert("You have logged in successfully");
+    //   this.SignInForm.reset();
+    //   this.router.navigate(['/dashboard']);
+    //  },
+    //  err => {
+    //   alert("User already exists")
+    //  })
   }
 
   onKey(e: Event) {

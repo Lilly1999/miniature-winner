@@ -8,7 +8,7 @@ mat-card{
     /* display: flex;
     align-items: center;
     justify-content: center; */
-    background-color:white;
+   
 }
 .header{
     text-align:center;
@@ -29,7 +29,7 @@ mat-card{
 
 
 .aLink{
-    float:right;
+    float: right;
     padding: right 90px;
     color:#980411;
     font-family: Nunito sans;
@@ -89,3 +89,12 @@ h2{
     width:40px;
     margin-top: 50px;
 }
+
+    @media screen and (max-width: 480px) {
+        .hide{
+            display:none;
+            overflow: none;
+            
+    }
+    
+    }

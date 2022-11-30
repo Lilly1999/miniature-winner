@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-modal',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalComponent implements OnInit {
   proceed: boolean = true;
-  constructor() { }
+  constructor(private dialogRef:MatDialogRef<ModalComponent>) { }
 
   ngOnInit(): void {
     this.proceed=true;
@@ -16,7 +17,7 @@ export class ModalComponent implements OnInit {
 
  smsVerify(): void{
   this.proceed = false;
-  console.log("smz");
+  console.log("sms");
   
 }
 emailVerify(): void{

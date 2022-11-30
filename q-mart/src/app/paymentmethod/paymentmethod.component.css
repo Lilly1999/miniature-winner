@@ -1,0 +1,16 @@
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin: 15px 0; */
+    /* align-items: flex-start; */
+  }
+  
+  .radio-button {
+    margin: 5px;
+  
+  }
+.image{
+    width:60px;
+}

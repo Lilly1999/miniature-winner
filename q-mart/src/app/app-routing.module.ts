@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CartComponent } from './cart/cart.component';
 import { ChangepassComponent } from './changepass/changepass.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { HomeComponent } from './home/home.component';
 import { ModalComponent } from './modal/modal.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { PaymentmethodComponent } from './paymentmethod/paymentmethod.component';
 import { RecoverComponent } from './recover/recover.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
@@ -18,10 +20,12 @@ const routes: Routes = [
   { path: 'forgotpassword', component:ForgotpasswordComponent },
   { path: 'dashboard', component:DashboardComponent },  
   { path: 'home', component:HomeComponent },
-  {path: 'modal', component:ModalComponent},
-  {path:'recover', component:RecoverComponent},
-  {path:'verification', component:VerificationComponent},
-  {path:'changepass', component:ChangepassComponent},
+  { path: 'modal', component:ModalComponent},
+  { path:'recover', component:RecoverComponent},
+  { path:'verification', component:VerificationComponent},
+  { path:'changepass', component:ChangepassComponent},
+  { path:'cart',component:CartComponent},
+  { path:'paymentmethod',component:PaymentmethodComponent},
   { path: '**', component:NotfoundComponent },  
  
 ];

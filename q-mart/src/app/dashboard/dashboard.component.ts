@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ShowHideStyleBuilder } from '@angular/flex-layout';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { CartService } from '../service/cart.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,7 +8,8 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  constructor() { }
+  product:any;
+  constructor(private cartService:CartService) { }
 
   ngOnInit(): void {
   }
@@ -42,32 +43,59 @@ export class DashboardComponent implements OnInit {
   [
     {
       price:700,
-      name:'Handbag',
-      imageUrl:"../assets/handbag.jpeg",
+      title:'Handbag',
+      image:"../assets/handbag.jpeg",
+      description:"black leather handbag"
     },
+
+    {
+      price:1340,
+      title:'Shea Mosturizer',
+      image:"../assets/shea butter.jpeg",
+      description:"SheaMosturizer Lavender & wild orchid bath,body & massage oil 8oz"
+    },
+
     {
       price:5000,
-      name:'Sneakers',
-      imageUrl:"../assets/sneakers.jpeg",
+      title:'Sneakers',
+      image:"../assets/sneakers.jpeg",
+      description:"grey sports shoes"
     },
     {
-      price:25000,
-      name:'Laptop',
-      imageUrl:"../assets/laptop.jpg",
+      price:2000,
+      title:'Cooking oil',
+      image:"../assets/oil.jpg",
+      description:"5 litres golden fry cooking oil"
     },
     {
       price:700,
-      name:'heels',
-      imageUrl:"../assets/heels.jpg",
+      title:'heels',
+      image:"../assets/heels.jpg",
+      description:"women golden stilleto heels"
     },
     {
       price:1500,
-      name:'hood',
-      imageUrl:"../assets/hood.jpg",
-    }
+      title:'hood',
+      image:"../assets/hood.jpg",
+      description:"grey hoody"
+    },
+    {
+    price:800,
+    title:'Lotion',
+    image:"../assets/lotion.jpg",
+    description:"Nivea for men body lotion"
+  }
     
   ]
   imageurl:string = "../assets/handbag.jpeg";
+  gridColumns=3;
+
+  AddToCart(product: any){
+    this.cartService.AddToCart(product);
+    console.log(product);
+    window.alert('Your product has been added to cart!');
+    
+  }
 }
 
 

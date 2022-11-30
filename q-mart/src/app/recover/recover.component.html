@@ -1,6 +1,7 @@
 <mat-card>
     <mat-card-content>
         <div class="header">
+            <img class="image" src="../assets/q4.png">
             <h2 >Recover password</h2>
            <p>Don't worry it happens please enter the phone number associated with it</p>
           </div>
@@ -8,14 +9,15 @@
             <div class="PhoneNo">
                 <mat-form-field class="full-width" appearance="outline">
                     <mat-label>Phone no.</mat-label>
-                    <input (keyup)="onKey($event)" type="text" formControlName="PhoneNo" matInput required/>  
-                    <mat-error *ngIf="!RecoverForm.get('PhoneNo')?.valid && RecoverForm.get('PhoneNo')?.touched">Password is required</mat-error>  
-                    <mat-error *ngIf="RecoverForm.get('PhoneNo')?.hasError 'pattern'">Please Enter a valid phone number</mat-error>
+                    <input type="text" formControlName="PhoneNo" matInput required/>  
+                    <mat-error *ngIf="RecoverForm.get ('PhoneNo')?.errors?.['required']">
+                        Phone number is required </mat-error>
+                        <mat-error *ngIf="RecoverForm.get('PhoneNo')?.errors?.['pattern']">Please enter a valid phone number</mat-error>
                 </mat-form-field>
             </div>
-          <span class="use"> <a >Use email address instead</a></span> 
+            <button mat-raised-button class="aLink"  routerLink="/recover">Use Email instead</button>
 
-            <div><button mat-raised-button style="background-color:#980411;margin-top:10px; width:350px;color:white;font-family: Nunito sans;position:absolute;bottom:100px; left:490px;" routerLink="/verification">SEND CODE</button> </div>
+            <button  class="sendcode"mat-raised-button routerLink="/verification">SEND CODE</button> 
         </form> 
     </mat-card-content>
 </mat-card>
