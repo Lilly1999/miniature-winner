@@ -1,0 +1,60 @@
+<!-- <mat-card>
+<label id="radio-group-label">Payment Method</label>
+<mat-radio-group
+  aria-labelledby="radio-group-label"
+  class="radio-group"
+  [(ngModel)]="paymentmethod">
+  <mat-radio-button labelPosition ="before" class="radio-button" *ngFor="let payment of paymentmethods" [value]="payment">
+    {{payment}}
+  </mat-radio-button>
+</mat-radio-group>
+<div>Your favorite season is: {{paymentmethod}}</div>
+</mat-card> -->
+<!-- <div class="container">
+<div class="row ">
+    <img class="image" src="../assets/mobileMoney.png">
+    Mobile Money
+    </div>
+    <div> 
+        <img class="image" src="../assets/mastercard-logo.png">
+        MasterCard
+    </div>
+   <div> 
+    <img class="image" src="../assets/paypal.png">
+    Paypal
+</div>
+   <div>
+    <img class="image" src="../assets/visa.png">
+    Visa
+</div>
+</div> -->
+<mat-card class="card">
+<div class="container">
+  
+  <h2>Payment Method</h2>
+  <div class="row ">
+    <mat-card class="payment justify-content-around">
+      <img class="image" src="../assets/mobileMoney.png">
+      Mobile Money
+      <input type="radio">
+    </mat-card>
+    <mat-card class="payment justify-content-around">
+      <img class="image" src="../assets/mastercard-logo.png">
+      MasterCard
+    <input type="radio">
+    </mat-card>
+    <mat-card class="payment justify-content-around">
+      <img class="image" src="../assets/visa.png">
+      Visa
+      <input type="radio">
+    </mat-card>
+    <mat-card class="payment justify-content-around">
+      <img class="image" src="../assets/paypal.png">
+      Paypal
+      <input type="radio">
+    </mat-card>
+    
+  </div>
+  </div>
+  <button class="button" mat-raised-button> Next </button>
+</mat-card>

@@ -1,0 +1,36 @@
+.card{
+    height:60vh;
+    margin: 25px;
+    padding: 25px;
+}
+.center{
+    position:absolute;
+    top:55%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.center img{
+    text-decoration: none;
+    color:inherit;
+    border:none;
+    outline: none;
+    height: 165px;
+    width:250px;
+    margin: 20px 0px;
+}
+.card-table{
+    
+    display: flex;
+    flex-direction: column;
+    min-width: none;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border:1px solid rgba(0, 0, 0,0.2);
+    border-radius:0.25rem;
+
+}
+.image{
+    width:120px;
+}

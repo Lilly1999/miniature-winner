@@ -1,7 +1,7 @@
-<mat-card>
+<mat-card class="changepass">
     <mat-card-content>
         <div class="header">
-            <img class="image"  src="../assets/q4.png" alt="logo">
+            <img class="image" src="../assets/q4.png" alt="logo">
             <h2>Change Password</h2>
             <p class="set"> Set a new password for your account so you can <br> login and access all the features</p>
         </div>
@@ -40,14 +40,18 @@
                     </button>
                     <mat-error
                         *ngIf="!ConfirmPasswordForm.get('ConfirmPassword')?.valid && ConfirmPasswordForm.get('ConfirmPassword')?.touched">
-                        Confirm Password is required </mat-error>
-
+                        Confirm Password is required
+                    </mat-error>
+                    <mat-error
+                        *ngIf="ConfirmPasswordForm.get('ConfirmPassword')?.invalid && ConfirmPasswordForm.get('ConfirmPassword')?.touched || ConfirmPasswordForm.get('ConfirmPassword')?.dirty  ">
+                        Password and confirm password do not match
+                    </mat-error>
                 </mat-form-field>
             </div>
 
-            <div><button mat-raised-button
-                    style="background-color:#980411;margin-top: 40px; width:250px;color:white;font-family: Nunito sans;position:absolute;bottom:100px;right:120px;"
-                    (click)="onConfirmPassword()">SAVE</button>
+            <div>
+                <button class="button" style=" background-color:#980411;color:white" mat-raised-button (click)="onConfirmPassword()"
+                    [disabled]="ConfirmPasswordForm.invalid">SAVE</button>
             </div>
         </form>
     </mat-card-content>

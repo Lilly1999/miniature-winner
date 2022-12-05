@@ -5,34 +5,26 @@
     <div class="row">
      <h2>verification</h2>
      <h5>We have sent a verification code to<br>+254789***456</h5>
-        <div class="col-md-2">
-            <input type="text"  #txt1 maxlength="1" (keyup)="move ($event, '',txt1,txt2)">
-        </div>
-        <div class="col-md-2">
+        <div class="col-md-2" style="width:fit-content;display: flex;justify-content: space-between;width:100%">
+         <input type="text"  #txt1 maxlength="1" (keyup)="move ($event, '',txt1,txt2)">
+         
             <input type="text" #txt2 maxlength="1" (keyup)="move ($event, txt1, txt2,txt3)">
-        </div>
-        <div class="col-md-2">
             <input type="text" #txt3 maxlength="1" (keyup)="move ($event, txt2, txt3,txt4)">
-        </div>
-        
-        <div class="col-md-2">
             <input type="text" #txt4 maxlength="1" (keyup)="move ($event, txt3, txt4, txt5)">
-        </div> 
-         <div class="col-md-2">
+      
             <input type="text" #txt5 maxlength="1" (keyup)="move ($event, txt4, txt5, txt6)">
-        </div>
-        <div class="col-md-2">
+
             <input type="text" #txt6 maxlength="1" (keyup)="move ($event, txt5, txt6,'')">
         </div>
         
     
     </div>
-   
-<a style="color:#980411; display: flex;justify-content: center; font-family: Nunito sans;font-size: 12px;font-weight: 600;" >Resend code</a>
+   <button mat-raised-button style="align-items:center; margin-top: 80px; font-family: Nunito sans;font-size: 12px;font-weight: 600;">Resend code </button>
 </div>
-<h6>
-    Send verification code to <a style="color:#980411;" routerLink="/Confirm">Email</a> instead
-</h6>
+<button class="button" mat-raised-button >
+    Send code via Email
+</button>
+<button mat-raised-button style="position:absolute;bottom:100px;align-items:center;" routerLink="/changepass">Continue</button>
 </mat-card-content>
 </mat-card>
 

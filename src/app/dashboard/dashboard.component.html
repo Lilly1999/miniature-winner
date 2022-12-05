@@ -1,12 +1,14 @@
 <section class="banner">
   <div class="container text-center">
-    <form >
+    <form>
       <mat-form-field class="full-width" appearance="outline">
-          <span matPrefix> </span>
-          <input type="text" matInput placeholder="Type to search.." fxFlex style="flex:1 1" name= "search">
-          <button matSuffix mat-button><mat-icon >search</mat-icon></button>
-          </mat-form-field>
-</form>
+        <span matPrefix> </span>
+        <input type="text" matInput placeholder="Search for products" fxFlex style="flex:1 1" name="search">
+        <button matSuffix mat-button>
+          <mat-icon class="search">search</mat-icon>
+        </button>
+      </mat-form-field>
+    </form>
     <owl-carousel-o [options]="productOptions">
       <ng-template carouselSlide>
         <img class="image1" src="../assets/carousel7.jpg">
@@ -23,95 +25,93 @@
     </owl-carousel-o>
   </div>
 </section>
-<mat-card-actions>
-  <button mat-button >
-    <span> All products
-  </span>
-  </button>
-  <button mat-button >
-    <span>
-    Shoes
-  </span>
-  </button>
-  <button mat-button >
-    <span>
-    Bags
-  </span>
-  </button>
-</mat-card-actions>
 <section class="bg-color">
-  <div fxHide.lt-md>
-    <span class="column-label"> Columns</span>
-    <mat-slider [min]="3" [max]="6" [thumbLabel]="true" [(ngModel)]="gridColumns"></mat-slider>
+  <div class="container-fluid" >
+    <div class="container d-flex justify-content-around">
+      <!-- <div class="items"> -->
+    <button class="AllProducts" mat-raised-button>
+      All products
+    </button>
+    <button  class="AllProducts" mat-raised-button >
+      Shoes
+    </button>
+    <button  class="AllProducts" mat-raised-button >
+      Bags
+    </button>
   </div>
-    <div class="title">
-      <p>New Arrivals</p>
-    </div>
-    <div class="content">
-    <div fxLayout="row wrap"fxLayoutGap="16px grid">
-      <div [fxFlex]="(100/gridColumns) + '%'" *ngFor="let product of productArray">
-        <mat-card class="mat-elevation-z4">
-        <div class="new">New</div>
-        <img class="products" src={{product.imageUrl}} alt="handbag">
-        <h2>{{product.name}}</h2>
-        <p class="money">Ksh {{product.price}}
-        
-        </p>
-        <mat-card-actions>
-          <button mat-button >
-            <span> <mat-icon>favorite</mat-icon>
-          </span>
-          </button>
-          <button mat-button >
-            <span>
-            <mat-icon>shopping_cart</mat-icon>
-          </span>
-          </button>
-          <button mat-button >
-            <span>
-            <mat-icon>remove_red_eye</mat-icon>
-          </span>
-          </button>
-        </mat-card-actions>
-      </mat-card>
+</div>
+<!-- </div> -->
+<br>
+  <div class="title">
+    <p>New Arrivals</p>
+  </div>
+  <div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div  *ngFor="let product of productArray">
+        <mat-card >
+          <div class="new">New</div>
+          <img class="products" src={{product.image}} alt="handbag">
+          <h2>{{product.title}}</h2>
+          <p style="white-space: nowrap;overflow:hidden;text-overflow:ellipsis;max-width:25ch;">{{product.description}}</p>
+          <p class="money">Ksh {{product.price}}
+
+    </p>
+          <mat-card-actions>
+            <button mat-button>
+              <span>
+                <mat-icon matTooltip="wishlist">favorite</mat-icon>
+              </span>
+            </button>
+            <button mat-button (click)="AddToCart(product)">
+              <span>
+                <mat-icon  matTooltip="Add to cart" >shopping_cart</mat-icon>
+              </span>
+            </button>
+            <button mat-button>
+              <span>
+                <mat-icon matTooltip="view ">remove_red_eye</mat-icon>
+              </span>
+            </button>
+          </mat-card-actions>
+        </mat-card>
       </div>
     </div>
   </div>
 </section>
-<section >
+<section>
   <div class="title">
     <p>Popular Products</p>
   </div>
   <div class="content">
-  <div fxLayout="row wrap"fxLayoutGap="16px grid">
-    <div fxFlex="25%" *ngFor="let product of productArray">
-      <mat-card class="mat-elevation-z4">
-      <div class="new">New</div>
-      <img class="products" src={{product.imageUrl}} alt="handbag">
-      <h2>{{product.name}}</h2>
-      <p class="money">Ksh {{product.price}}
-      
-      </p>
-      <mat-card-actions>
-        <button mat-button >
-          <span> <mat-icon>favorite</mat-icon>
-        </span>
-        </button>
-        <button mat-button >
-          <span>
-          <mat-icon>shopping_cart</mat-icon>
-        </span>
-        </button>
-        <button mat-button >
-          <span>
-          <mat-icon>remove_red_eye</mat-icon>
-        </span>
-        </button>
-      </mat-card-actions>
-    </mat-card>
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div *ngFor="let product of productArray">
+        <mat-card class="mat-elevation-z4">
+          <div class="new">New</div>
+          <img class="products" src={{product.image}} alt="handbag">
+          <h2>{{product.title}}</h2>
+          <p style="white-space: nowrap;overflow:hidden;text-overflow:ellipsis;max-width:25ch;">{{product.description}}</p>
+          <p class="money">Ksh {{product.price}}
+
+          </p>
+          <mat-card-actions>
+            <button mat-button>
+              <span>
+                <mat-icon matTooltip="wishlist">favorite</mat-icon>
+              </span>
+            </button>
+            <button  mat-button (click)="AddToCart(product)" >
+              <span>
+                <mat-icon matTooltip="Add to cart">shopping_cart</mat-icon>
+              </span>
+            </button>
+            <button mat-button>
+              <span>
+                <mat-icon matTooltip="view">remove_red_eye</mat-icon>
+              </span>
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
     </div>
   </div>
-</div>
-
-
 </section>

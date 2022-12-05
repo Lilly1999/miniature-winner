@@ -15,9 +15,9 @@
                         <mat-error *ngIf="RecoverForm.get('PhoneNo')?.errors?.['pattern']">Please enter a valid phone number</mat-error>
                 </mat-form-field>
             </div>
-            <a class="aLink"  routerLink="/recover">Use Email instead</a>
+            <button mat-raised-button class="aLink"  routerLink="/recover">Use Email instead</button>
 
-            <button mat-raised-button style="background-color:#980411;margin-top:10px; width:350px;color:white;font-family: Nunito sans;position:absolute;bottom:100px; left:450px;" routerLink="/verification">SEND CODE</button> 
+            <button  class="sendcode"mat-raised-button routerLink="/verification">SEND CODE</button> 
         </form> 
     </mat-card-content>
 </mat-card>

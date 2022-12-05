@@ -2,7 +2,7 @@ mat-toolbar{
     position:sticky;
     top:0;
     z-index: 100;
-    background: white;
+    background: rgb(133, 129, 129);
 
 }
 button{

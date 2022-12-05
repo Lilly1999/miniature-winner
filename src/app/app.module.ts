@@ -38,8 +38,13 @@ import {MatBadgeModule} from '@angular/material/badge';
 import { CartComponent } from './cart/cart.component';
 import {MatTableModule } from '@angular/material/table';
 import { LayoutModule } from '@angular/cdk/layout';
-
-
+import { NgDynamicBreadcrumbModule } from "ng-dynamic-breadcrumb";
+import { PaymentmethodComponent } from './paymentmethod/paymentmethod.component';
+import { MatRadioModule } from '@angular/material/radio';
+import { ProductsComponent } from './products/products.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { PaymentmodalComponent } from './paymentmodal/paymentmodal.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +62,10 @@ import { LayoutModule } from '@angular/cdk/layout';
     VerificationComponent,
     ChangepassComponent,
     CartComponent,
+    PaymentmethodComponent,
+    ProductsComponent,
+    PaymentmodalComponent,
+   
     
 
     
@@ -87,6 +96,10 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatBadgeModule,
     MatTableModule,
     LayoutModule,
+    NgDynamicBreadcrumbModule,
+    MatRadioModule,
+    MatTooltipModule,
+    MatSnackBarModule
    ],
     providers: [ ApiService,
       {
@@ -96,4 +109,4 @@ import { LayoutModule } from '@angular/cdk/layout';
    ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

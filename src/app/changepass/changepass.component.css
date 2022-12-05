@@ -1,20 +1,21 @@
 mat-card{
-    width:500px;
+    width:400px;
     margin:2cm auto;
     text-align: center;
-    height: 100%;
-    background-color:#F8F8F8;
+    height: 80%;
+
+    /* background-color:#F8F8F8; */
 }
 .header{
     text-align:center;
 
 }
 .full-width{
-    width:100%;
+    width:80%;
 }
 h2{
     font-family: Nunito sans;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 .Icon{
     position:absolute;
@@ -22,9 +23,22 @@ h2{
     margin-top:0px;;
 }
 .set{
-    margin-top: 50px;
+    margin-top: 10px;
 }
 .image{
     width:40px;
-    margin-top: 40px;
+    margin-top: 10px;
+}
+.button{
+    width:60%;
+    font-family: Nunito sans;
+    position:absolute;
+    bottom:50px;
+    right:90px;
+}
+@media screen and (max-width: 480px) {
+    .changepass{
+        overflow: none;       
+}
+
 }
