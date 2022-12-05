@@ -8,10 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class PaymentmethodComponent implements OnInit {
   paymentmethod!: string;
   paymentmethods: string[] = [
-    'Mobile Money',
-    'MasterCard',
-    'Visa', 
-    'Paypal'];
+
+  ];
 
   constructor() { }
 

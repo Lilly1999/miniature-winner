@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { ModalComponent } from './modal/modal.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { PaymentmethodComponent } from './paymentmethod/paymentmethod.component';
+import { PaymentmodalComponent } from './paymentmodal/paymentmodal.component';
 import { RecoverComponent } from './recover/recover.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path:'changepass', component:ChangepassComponent},
   { path:'cart',component:CartComponent},
   { path:'paymentmethod',component:PaymentmethodComponent},
+  {path: 'paymentmodal',component:PaymentmodalComponent},
   { path: '**', component:NotfoundComponent },  
  
 ];

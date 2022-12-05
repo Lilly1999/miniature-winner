@@ -44,6 +44,8 @@ import { MatRadioModule } from '@angular/material/radio';
 import { ProductsComponent } from './products/products.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { PaymentmodalComponent } from './paymentmodal/paymentmodal.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,6 +64,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     CartComponent,
     PaymentmethodComponent,
     ProductsComponent,
+    PaymentmodalComponent,
+   
     
 
     

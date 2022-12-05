@@ -12,5 +12,30 @@
   
   }
 .image{
-    width:60px;
+    width:40px;
+}
+.mat-card{
+  margin-top: 20px;
+}
+.payment{
+  display:flex;
+  
+}
+.h2{
+  text-align: center;
+}
+.container{
+  width:80%;
+}
+.card{
+  height: 80vh;
+  width: 60%;
+  margin-left: 90px;
+
+}
+.button{
+  position:absolute;
+  bottom:30px;
+  right:80px;
+  width:20%;
 }
